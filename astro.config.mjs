@@ -1,7 +1,8 @@
 import { defineConfig } from 'astro/config'
 import storyblok from '@storyblok/astro'
 import tailwind from '@astrojs/tailwind'
-import netlify from '@astrojs/netlify/functions'
+//import netlify from '@astrojs/netlify/functions'
+import vercel from '@astrojs/vercel/serverless';
 
 export default defineConfig({
   integrations: [
@@ -17,5 +18,5 @@ export default defineConfig({
     tailwind(),
   ],
   output: 'server',
-  adapter: netlify(),
+  adapter: vercel(),
 })
